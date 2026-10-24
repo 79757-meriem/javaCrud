@@ -1,0 +1,72 @@
+:root {
+  color-scheme: light;
+  --ink: #272923;
+  --muted: #898a80;
+  --paper: #f7f6f2;
+  --line: #e9e7df;
+  --green: #475b43;
+  --orange: #d8784d;
+  font-family: "DM Sans", sans-serif;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); background: var(--paper); }
+button, input, textarea { font: inherit; }
+button { cursor: pointer; }
+.app-shell { min-height: 100vh; }
+.sidebar { position: fixed; inset: 0 auto 0 0; width: 246px; padding: 31px 20px 20px; display: flex; flex-direction: column; background: #fbfaf7; border-right: 1px solid var(--line); z-index: 2; }
+.brand { display: flex; align-items: center; gap: 11px; padding: 0 11px; color: var(--ink); text-decoration: none; font: 800 22px/1 "Manrope", sans-serif; letter-spacing: -1.1px; }
+.brand-period { color: var(--orange); }
+.brand-mark { display: flex; align-items: end; gap: 2px; height: 22px; transform: rotate(-9deg); }
+.brand-mark span { width: 5px; border-radius: 5px; background: var(--green); }
+.brand-mark span:nth-child(1) { height: 13px; }.brand-mark span:nth-child(2) { height: 19px; }.brand-mark span:nth-child(3) { height: 10px; }
+.sidebar-label { margin: 60px 11px 15px; color: #a4a398; font-size: 9px; font-weight: 700; letter-spacing: 1.5px; }
+.nav-item { width: 100%; display: flex; align-items: center; gap: 12px; padding: 11px 12px; border: 0; border-radius: 7px; color: #55574e; background: transparent; text-align: left; font-size: 13px; font-weight: 600; }
+.nav-item.active { color: var(--green); background: #edf0e9; }
+.nav-item svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.note-count { margin-left: auto; color: #929488; font-size: 11px; font-weight: 500; }
+.sidebar-bottom { margin-top: auto; }
+.sidebar-tip { position: relative; padding: 18px 16px 15px; border: 1px solid #ece8df; border-radius: 9px; background: #f8f5ed; }
+.tip-sparkle { color: var(--orange); font-size: 18px; }
+.sidebar-tip p { margin: 10px 0 13px; color: #68695f; font: 500 12px/1.65 "Manrope", sans-serif; }
+.tip-credit { color: #a09f93; font-size: 8px; font-weight: 700; letter-spacing: 1.1px; }
+.profile { display: flex; align-items: center; gap: 10px; margin: 20px 2px 0; padding-top: 18px; border-top: 1px solid var(--line); }
+.avatar, .top-avatar { display: grid; place-items: center; width: 31px; height: 31px; border-radius: 50%; color: #fff; background: #839077; font: 700 12px "Manrope", sans-serif; }
+.profile strong, .profile span { display: block; }.profile strong { font-size: 11px; font-weight: 600; }.profile div:nth-child(2) span { margin-top: 3px; color: var(--muted); font-size: 10px; }
+.profile-menu { margin-left: auto; color: #9a9b91; font-size: 20px; letter-spacing: 1px; }
+.main-content { min-height: 100vh; margin-left: 246px; }
+.topbar { height: 72px; display: flex; align-items: center; justify-content: space-between; padding: 0 6.2%; border-bottom: 1px solid var(--line); }
+.breadcrumb { color: #92938a; font-size: 11px; }.breadcrumb span { padding: 0 9px; color: #c8c6bb; }.breadcrumb strong { color: #51534a; font-weight: 600; }
+.topbar-right { display: flex; align-items: center; gap: 18px; }.save-indicator { display: flex; align-items: center; gap: 7px; color: #82857b; font-size: 10px; }.save-indicator i, .eyebrow span { width: 6px; height: 6px; border-radius: 50%; background: #8da17c; }
+.top-avatar { width: 29px; height: 29px; font-size: 11px; }
+.workspace { max-width: 1120px; padding: 60px 6.2% 24px; margin: 0 auto; }
+.page-heading { min-height: 198px; position: relative; display: flex; justify-content: space-between; overflow: hidden; }
+.eyebrow { display: flex; align-items: center; gap: 8px; color: #8d8e82; font-size: 9px; font-weight: 700; letter-spacing: 1.45px; }
+h1 { margin: 18px 0 11px; font: 700 clamp(36px, 4vw, 49px)/1.13 "Manrope", sans-serif; letter-spacing: -2.2px; }
+h1 em { color: var(--green); font-style: normal; }
+.subtitle { margin: 0; color: #85867c; font-size: 12px; }
+.heading-art { position: relative; width: 190px; height: 165px; margin: 8px 48px 0 0; }
+.art-sun { position: absolute; top: 16px; right: 30px; width: 65px; height: 65px; border-radius: 50%; background: #e9cbaa; }
+.art-line { position: absolute; border: 1px solid #b9c2ac; border-radius: 50%; transform: rotate(-34deg); }.art-line-one { width: 162px; height: 55px; top: 68px; right: 4px; }.art-line-two { width: 134px; height: 44px; top: 88px; right: 15px; border-color: #d9c7a9; }
+.art-leaf { position: absolute; top: 78px; right: 88px; color: var(--green); font-size: 31px; }
+.notes-toolbar { display: flex; align-items: center; justify-content: space-between; margin-top: 38px; padding: 20px 0 17px; border-bottom: 1px solid var(--line); }
+.section-title { display: flex; align-items: baseline; gap: 10px; }.section-title h2 { margin: 0; font: 700 17px "Manrope", sans-serif; letter-spacing: -.4px; }.total-label { color: #98998f; font-size: 10px; }
+.toolbar-actions { display: flex; align-items: center; gap: 10px; }
+.search-box { width: 190px; height: 35px; display: flex; align-items: center; gap: 8px; padding: 0 10px; border: 1px solid #e8e6de; border-radius: 6px; background: #fbfaf7; }
+.search-box svg { width: 15px; height: 15px; fill: none; stroke: #96978e; stroke-width: 1.7; stroke-linecap: round; }.search-box input { width: 100%; border: 0; outline: 0; color: var(--ink); background: transparent; font-size: 10px; }.search-box input::placeholder { color: #a3a49b; }
+.new-note-button { height: 35px; display: inline-flex; align-items: center; gap: 8px; padding: 0 13px; border: 0; border-radius: 6px; color: #fff; background: var(--green); font-size: 11px; font-weight: 600; transition: background .2s, transform .2s; }.new-note-button:hover, .save-button:hover { background: #344630; transform: translateY(-1px); }.new-note-button span { font-size: 17px; font-weight: 400; line-height: 0; }
+.notes-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; padding: 22px 0 40px; }
+.note-card { min-height: 174px; display: flex; flex-direction: column; padding: 17px 17px 13px; border: 1px solid #ebe8e0; border-radius: 8px; background: #fcfbf8; transition: border .2s, transform .2s, box-shadow .2s; animation: appear .28s ease both; }.note-card:hover { transform: translateY(-3px); border-color: #d9d8ce; box-shadow: 0 7px 18px #34351b0b; }
+.note-card:nth-child(5n+1) { --note-accent: #829078; --note-tint: #eff1eb; }.note-card:nth-child(5n+2) { --note-accent: #c28b61; --note-tint: #f5eee7; }.note-card:nth-child(5n+3) { --note-accent: #8883a0; --note-tint: #f0eff4; }.note-card:nth-child(5n+4) { --note-accent: #c77b68; --note-tint: #f7eeeb; }.note-card:nth-child(5n) { --note-accent: #789091; --note-tint: #edf2f0; }
+.card-top { display: flex; align-items: center; justify-content: space-between; }.card-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--note-accent); box-shadow: 0 0 0 4px var(--note-tint); }
+.card-actions { display: flex; gap: 5px; opacity: 0; transition: opacity .2s; }.note-card:hover .card-actions, .note-card:focus-within .card-actions { opacity: 1; }.card-action { display: grid; place-items: center; width: 25px; height: 25px; border: 0; border-radius: 5px; color: #8c8d82; background: transparent; font-size: 13px; }.card-action:hover { color: var(--ink); background: #efeee8; }.card-action.delete:hover { color: #bb5d49; background: #f8ece8; }
+.note-card h3 { margin: 15px 0 7px; overflow: hidden; color: #363830; font: 700 13px/1.4 "Manrope", sans-serif; text-overflow: ellipsis; white-space: nowrap; }.note-card p { display: -webkit-box; margin: 0; overflow: hidden; color: #818278; font-size: 10.5px; line-height: 1.65; -webkit-box-orient: vertical; -webkit-line-clamp: 3; white-space: pre-wrap; overflow-wrap: anywhere; }.card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 13px; color: #a2a398; font-size: 9px; }.card-tag { padding: 4px 7px; border-radius: 4px; color: var(--note-accent); background: var(--note-tint); font-size: 8px; font-weight: 600; }
+.empty-state { grid-column: 1 / -1; min-height: 230px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }.empty-illustration { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 13px; border-radius: 15px; color: #73836a; background: #edf0e9; font-size: 24px; }.empty-state h3 { margin: 0 0 7px; font: 700 14px "Manrope", sans-serif; }.empty-state p { max-width: 270px; margin: 0; color: #8c8d83; font-size: 11px; line-height: 1.6; }
+.status-message { margin-top: 14px; padding: 10px 12px; border: 1px solid #efd8cd; border-radius: 6px; color: #99543d; background: #fbf1ec; font-size: 11px; }.status-message[hidden] { display: none; }
+.page-footer { display: flex; justify-content: space-between; padding: 15px 0 0; border-top: 1px solid var(--line); color: #a1a196; font-size: 9px; }.page-footer span:last-child { font-size: 8px; font-weight: 700; letter-spacing: 1.1px; }.page-footer b { padding: 0 5px; color: var(--orange); }
+.note-dialog { width: min(520px, calc(100% - 32px)); padding: 0; border: 1px solid #e9e6dc; border-radius: 11px; background: #fbfaf7; color: var(--ink); box-shadow: 0 24px 90px #28291e2b; }.note-dialog::backdrop { background: #27292369; backdrop-filter: blur(3px); }.note-dialog form { padding: 24px; }.dialog-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px; }.dialog-kicker { color: #98998e; font-size: 9px; font-weight: 700; letter-spacing: 1.35px; }.icon-button { width: 29px; height: 29px; border: 0; border-radius: 50%; color: #7f8075; background: #f0efe9; font-size: 20px; line-height: 1; }.field-label { display: block; margin-bottom: 8px; color: #77786d; font-size: 10px; font-weight: 600; }.note-dialog input, .note-dialog textarea { width: 100%; border: 0; outline: 0; color: #33352e; background: transparent; }.note-dialog input { padding: 0 0 13px; border-bottom: 1px solid #e8e5db; font: 600 18px "Manrope", sans-serif; letter-spacing: -.4px; }.note-dialog input::placeholder { color: #c0bfb4; }.content-label { margin-top: 19px; }.note-dialog textarea { min-height: 180px; resize: vertical; font-size: 12px; line-height: 1.7; }.note-dialog textarea::placeholder { color: #b0b0a6; }.dialog-footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 14px; border-top: 1px solid #e9e6de; }.dialog-footer > span { color: #a0a095; font-size: 9px; }.dialog-footer div { display: flex; gap: 8px; }.cancel-button, .save-button { height: 33px; padding: 0 12px; border-radius: 5px; font-size: 10px; font-weight: 600; }.cancel-button { border: 1px solid #e8e6de; color: #6e7066; background: transparent; }.save-button { border: 0; color: #fff; background: var(--green); transition: .2s; }.save-button span { margin-left: 6px; }
+@keyframes appear { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 1050px) { .notes-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }.heading-art { margin-right: 0; } }
+@media (max-width: 720px) { .sidebar { position: static; width: 100%; height: 62px; flex-direction: row; align-items: center; padding: 0 20px; border-right: 0; border-bottom: 1px solid var(--line); }.sidebar-label, .nav-item, .sidebar-bottom { display: none; }.brand { padding: 0; }.main-content { margin-left: 0; }.topbar { height: 56px; padding: 0 20px; }.workspace { padding: 38px 20px 20px; }.page-heading { min-height: 180px; }.heading-art { position: absolute; right: -22px; top: 9px; width: 135px; opacity: .65; transform: scale(.78); transform-origin: top right; }.page-heading > div:first-child { position: relative; z-index: 1; }h1 { font-size: 39px; }.notes-toolbar { align-items: flex-start; gap: 14px; flex-direction: column; margin-top: 25px; }.toolbar-actions { width: 100%; }.search-box { flex: 1; }.notes-grid { padding-top: 16px; gap: 10px; }.note-card { min-height: 165px; padding: 14px; }.card-actions { opacity: 1; }.page-footer { margin-top: 3px; } }
+@media (max-width: 430px) { .notes-grid { grid-template-columns: 1fr; }.note-card { min-height: 150px; }.heading-art { right: -38px; opacity: .43; }.save-indicator { font-size: 0; gap: 0; }.save-indicator i { width: 7px; height: 7px; }.dialog-footer { align-items: flex-start; flex-direction: column; }.dialog-footer div { align-self: flex-end; } }
